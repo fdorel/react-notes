@@ -1,33 +1,42 @@
-.App {
-  text-align: center;
+html, body {
+  background: #8CB4CC;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-family: Srisakdi;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+label {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+div .nav-wrapper {
+  box-shadow: none !important;
+  background: #f5ce83;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  color: #ffffff;
+  font-size: 1.2rem !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-app .container {
+  width: 50% !important;
+  height: 100%;
+}
+
+h6 {
+  color: brown;
+  font-weight: bold;
+}
+
+button {
+  margin: 5px;
+  box-shadow: none !important;
+  background: #4F9C5E !important;
 }

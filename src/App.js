@@ -1,26 +1,44 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Todos from './Todos';
+import AddTodo from './AddTodo';
+import Navbar from './Navbar';
 
 class App extends Component {
+  state = {
+    todos: []
+  };
+
+  /*We will pas this function as a prop to {this.state.todos} below*/
+  deleteTodo = (id) => {
+    const todos = this.state.todos.filter(todo => {
+      return todo.id !== id
+    });
+    this.setState({
+      todos
+    })
+  };
+
+  addTodo = (todo) => {
+    todo.id = Math.random();
+
+    let todos = [...this.state.todos, todo];
+    this.setState({
+      todos
+    });
+
+  };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <React.Fragment>
+          <Navbar/>
+      <div className="todo-app container">
+        <h4 className="center brown-text">Notes</h4>
+        <Todos todos={this.state.todos} deleteTodo={this.deleteTodo}/>
+        <AddTodo addTodo={this.addTodo}/>
       </div>
+        </React.Fragment>
     );
   }
 }
