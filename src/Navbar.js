@@ -9,7 +9,7 @@ class Navbar extends Component {
             <React.Fragment>
                 <nav>
                     <div className="nav-wrapper">
-                        <ul className="right">
+                        <ul className="left">
                             <li><a href="" /*onClick={document.body.style.background = "#e3f599"}*/>Change Colors</a></li>
                         </ul>
                     </div>
