@@ -8,8 +8,8 @@ class Scriptmenu extends Component {
             <React.Fragment>
 
                 document.addEventListener('DOMContentLoaded', function() {
-                var elems = document.querySelectorAll('.sidenav');
-                var instances = M.Sidenav.init(elems, options);
+                let elems = document.querySelectorAll('.sidenav');
+                let instances = M.Sidenav.init(elems, options);
             });
 
             </React.Fragment>
