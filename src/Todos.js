@@ -12,7 +12,7 @@ const Todos = ({todos, deleteTodo}) => {
             )
         })
         ) : (
-        <p className="left">You have no notes</p>
+        <p className="center">You have no notes</p>
     );
 
     return (
