@@ -9,7 +9,7 @@ class App extends Component {
     todos: []
   };
 
-  /*We will pass this function as a prop to {this.state.todos} below*/
+  /* We will pass this function as a prop to {this.state.todos} below */
   deleteTodo = (id) => {
     const todos = this.state.todos.filter(todo => {
       return todo.id !== id
